@@ -1,0 +1,8 @@
+IF DATEPART('hour', [Start Time]) >= DATEPART('hour', [Start Time]) < 6
+  THEN 'Night'
+ELSEIF DATEPART('hour', [Start Time]) >= 6 AND DATEPART('hour', [Start Time]) < 12
+  THEN 'Morning'
+ELSEIF DATEPART('hour', [Start Time]) >= 12 AND DATEPART('hour', [Start Time]) < 18
+  THEN 'Afternoon'
+ELSE 'Evening'
+END
